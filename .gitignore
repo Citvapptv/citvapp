@@ -8,6 +8,8 @@ local.properties
 # Log/OS Files
 *.log
 *.DS_Store
+node_modules/
+dist/
 
 # Android Studio generated files and folders
 .idea/
