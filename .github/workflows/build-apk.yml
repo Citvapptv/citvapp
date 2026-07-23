@@ -40,7 +40,7 @@ jobs:
 
       - name: Add Capacitor Android platform
         run: |
-          if [ ! -f android/gradlew ] || [ ! -f android/app/build.gradle ]; then
+          if [ ! -f android/gradlew ] || [ ! -f android/build.gradle ] || [ ! -f android/app/build.gradle ]; then
             rm -rf android
             npx cap add android
           fi
