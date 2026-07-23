@@ -16,12 +16,17 @@ function App() {
       <section style={{ maxWidth: '32rem' }}>
         <h1 style={{ marginBottom: '1rem' }}>AstrogameWAR</h1>
         <p style={{ margin: 0, lineHeight: 1.6 }}>
-          Capacitor Android build pipeline is ready. Add the full game UI under
-          <code style={{ marginLeft: '0.35rem' }}>src/</code> when the app is ready.
+          Capacitor Android build pipeline is ready. Add the full game UI under <code>src/</code> when the app is ready.
         </p>
       </section>
     </main>
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('Expected #root element for AstrogameWAR app bootstrap.');
+}
+
+ReactDOM.createRoot(rootElement).render(<App />);
